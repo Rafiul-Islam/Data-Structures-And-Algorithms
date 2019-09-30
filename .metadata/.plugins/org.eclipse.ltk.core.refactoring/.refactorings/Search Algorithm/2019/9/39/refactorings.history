@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;startIndex&apos; in &apos;BinarySearch.binary_search(...)&apos; to &apos;firstIndex&apos;&#x0D;&#x0A;- Original project: &apos;Search Algorithm&apos;&#x0D;&#x0A;- Original element: &apos;BinarySearch.binary_search(int[], int).startIndex&apos;&#x0D;&#x0A;- Renamed element: &apos;startIndex&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;startIndex&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{BinarySearch.java[BinarySearch~binary_search~\[I~I@startIndex!698!716!702!711!I!0!false" name="firstIndex" references="true" stamp="1569485356804" version="1.0"/>
+</session>

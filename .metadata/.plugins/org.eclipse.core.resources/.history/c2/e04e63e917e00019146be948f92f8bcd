@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class LinearSearch {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		int arraylength = scanner.nextInt();
+		int array[] = new int[arraylength];
+
+		for (int i = 0; i < arraylength; i++) {
+			array[i] = scanner.nextInt();
+		}
+
+		System.out.println(Linear_search(array, arraylength) ? "This number Exist" : "This number doesn't Exist");
+
+		scanner.close();
+
+	}
+
+	public static boolean Linear_search(int[] array, int findTheNumber) {
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == findTheNumber) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class Queue {
+
+	int[] array = new int[5];
+	int top = 0;
+
+	public void add(int i) {
+		array[top] = i;
+		top++;
+	}
+
+	public void show() {
+		top--;
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+
+}

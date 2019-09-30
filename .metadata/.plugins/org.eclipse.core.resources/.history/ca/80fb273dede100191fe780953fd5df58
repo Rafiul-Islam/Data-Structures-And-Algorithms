@@ -1,0 +1,13 @@
+
+public class Queue {
+
+	int[] array = new int[5];
+	int top = 
+	
+	public void add(int i) {
+		
+		
+		
+	}
+
+}

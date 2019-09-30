@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SelecttionSort {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("array Length: ");
+		int arraylength = scanner.nextInt();
+
+		System.out.println("Array Elements: ");
+		int array[] = new int[arraylength];
+
+		for (int i = 0; i < arraylength; i++) {
+			array[i] = scanner.nextInt();
+		}
+
+		for (int i = 0; i < array.length; i++) {
+			int temp = array[i];
+			for (int j = 0; j < array.length; j++) {
+
+				if (temp < array[j]) {
+					temp = array[j];
+				}
+
+			}
+		}
+
+		System.out.print("After Sorting : ");
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
+
+	}
+
+}

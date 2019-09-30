@@ -1,0 +1,42 @@
+package MargeSort;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	private static void printArray(int[] array) {
+
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Array Length: ");
+		int arraylength = scanner.nextInt();
+
+		System.out.println("Array Elements: ");
+		int array[] = new int[arraylength];
+
+		for (int i = 0; i < arraylength; i++) {
+			array[i] = scanner.nextInt();
+		}
+
+		System.out.println("Before Sorting : ");
+		printArray(array);
+
+		marge_sort(array);
+
+		scanner.close();
+
+	}
+
+	private static void marge_sort(int[] array) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

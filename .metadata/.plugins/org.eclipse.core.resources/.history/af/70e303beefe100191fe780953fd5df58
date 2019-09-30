@@ -1,0 +1,48 @@
+
+public class Queue {
+
+	int[] array = new int[5];
+	int top = 0;
+	int poll_index = 0;
+
+	public void add(int data) {
+
+		if (top < array.length) {
+			array[top] = data;
+			top++;
+		} else {
+			System.out.println("Error: Queue is Overloaded");
+		}
+
+	}
+
+	public void show() {
+		top--;
+		for (int i = top; i > poll_index; i--) {
+			System.out.print(array[i] + " ");
+		}
+	}
+
+	public int peek() {
+		return array[poll_index];
+	}
+
+	public void offer(int data) {
+		if (top < array.length) {
+			array[top] = data;
+			top++;
+		} else {
+			System.out.println("Error: Queue is Overloaded");
+		}
+
+	}
+
+	public int poll() {
+		int data = array[poll_index];
+		array[poll_index] = 0;
+		poll_index++;
+		return data;
+
+	}
+
+}

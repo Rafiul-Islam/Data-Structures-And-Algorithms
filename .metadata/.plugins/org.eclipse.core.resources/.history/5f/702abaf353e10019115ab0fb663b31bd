@@ -1,0 +1,44 @@
+
+public class Stack {
+
+	int[] array = new int[5];
+	int top = 0;
+
+	public void push(int data) {
+
+		array[top] = data;
+		top++;
+
+	}
+
+	public void show() {
+
+		int index = top;
+
+		if (index > 4) {
+			index--;
+		}
+
+		for (int i = 0; i <= index; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+	public int peek() {
+		int index = top - 1;
+		return array[index];
+	}
+
+	public int pop() {
+
+		int index = top--;
+
+		int data = array[index];
+		array[index] = 0;
+		index--;
+		return data;
+	}
+
+}

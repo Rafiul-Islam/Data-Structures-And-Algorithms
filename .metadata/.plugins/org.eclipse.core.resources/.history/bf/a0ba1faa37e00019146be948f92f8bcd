@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class BinarySearch {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("array Length: ");
+		int arraylength = scanner.nextInt();
+
+		System.out.println("Array Elements: ");
+		int array[] = new int[arraylength];
+
+		for (int i = 0; i < arraylength; i++) {
+			array[i] = scanner.nextInt();
+		}
+		System.out.print("Finding Number: ");
+		int findingNumber = scanner.nextInt();
+
+		System.out.println(binary_search(array, findingNumber) ? "This Number Exist" : "This Number doesn't Exist");
+
+		scanner.close();
+
+	}
+
+	public static boolean binary_search(int[] array, int findingNumber) {
+		int firstIndex = 0;
+		int lastIndex = array.length - 1;
+		int midIndex = lastIndex / 2;
+		boolean result = false;
+		int count = 0;
+
+		while (count != 5) {
+
+			System.out.println("log = " + count);
+
+			if (array[midIndex] == findingNumber) {
+
+				System.out.println("f : " + firstIndex);
+				System.out.println("m : " + midIndex);
+				System.out.println("l : " + lastIndex);
+				System.out.println();
+
+				result = true;
+				midIndex = 0;
+				break;
+			} else if (array[midIndex] < findingNumber) {
+
+				System.out.println("f : " + firstIndex);
+				System.out.println("m : " + midIndex);
+				System.out.println("l : " + lastIndex);
+				System.out.println();
+
+				lastIndex = midIndex;
+				midIndex = (firstIndex + lastIndex) / 2;
+			} else if (array[midIndex] > findingNumber) {
+
+				System.out.println("f : " + firstIndex);
+				System.out.println("m : " + midIndex);
+				System.out.println("l : " + lastIndex);
+				System.out.println();
+
+				firstIndex = midIndex;
+				midIndex = (firstIndex + lastIndex) / 2;
+			}
+			count++;
+
+		}
+
+		return result;
+	}
+
+}
